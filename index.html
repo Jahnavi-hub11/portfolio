@@ -1,48 +1,559 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Jahnavi Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jahnavi Thaluru | Portfolio</title>
+
+    <meta name="description"
+          content="Jahnavi Thaluru's portfolio showcasing projects, skills, education, and career interests.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            font-size: 21px;
+            font-weight: normal;
+            color: #bfdbfe;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #e2e8f0;
+        }
+
+        .button {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .button:hover {
+            background: #7dd3fc;
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #0f172a;
+        }
+
+        .about {
+            max-width: 850px;
+        }
+
+        .education {
+            background: white;
+        }
+
+        .education-card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .skills {
+            background: #f1f5f9;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+            color: #1d4ed8;
+        }
+
+        .project-card p {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .project-card a {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        .interests {
+            background: #f1f5f9;
+        }
+
+        .contact {
+            text-align: center;
+            background: #0f172a;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact a {
+            color: #7dd3fc;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h3 {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 
-<body style="font-family: Arial; margin: 40px;">
+<body>
 
-    <h1>Jahnavi</h1>
-    <h3>BCA Student | Aspiring Data Analyst / ML Engineer</h3>
+    <!-- Navigation -->
 
-    <hr>
+    <header>
+        <h2>Jahnavi Thaluru</h2>
 
-    <h2>👩‍💻 About Me</h2>
-    <p>
-        I am a BCA student interested in Machine Learning, Data Science, and Web Development.
-        I love building real-world projects and learning new technologies.
-    </p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <hr>
 
-    <h2>🚀 Projects</h2>
+    <!-- Introduction -->
 
-    <h3>Credit Card Fraud Detection System</h3>
-    <p>
-        Built a machine learning model to detect fraudulent transactions using Python,
-        Scikit-learn, and XGBoost. Deployed using Streamlit.
-    </p>
+    <section class="hero">
 
-    <p>
-        🔗 <a href="https://credit-card-fraud-detection-uip6onwnkwbunjaumabx29.streamlit.app" target="_blank">
-        Live Demo
+        <h1>Hello, I'm Jahnavi!</h1>
+
+        <h3>BCA Student | Aspiring Professional</h3>
+
+        <p>
+            I am a BCA student at VIT Vellore with an interest in technology,
+            problem-solving, data analysis, and creative solutions.
+            I enjoy learning new skills and building projects that solve
+            real-world problems.
+        </p>
+
+        <a href="#projects" class="button">
+            Explore My Projects
         </a>
-    </p>
 
-    <p>
-        🔗 <a href="https://github.com/Jahnavi-hub11/credit-card-fraud-detection" target="_blank">
-        GitHub Code
+        <a href="#contact" class="button secondary">
+            Contact Me
         </a>
-    </p>
 
-    <hr>
+    </section>
 
-    <h2>📞 7569825452</h2>
-    <p>Email: talurujahnavi@gmail.com</p>
+
+    <!-- About Me -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am currently pursuing my Bachelor of Computer Applications
+                at VIT Vellore.
+
+                Through academic and personal projects, I have developed
+                skills in programming, data analysis, web development,
+                and problem-solving.
+
+                I am interested in exploring opportunities across IT,
+                business, analytics, and other professional fields where
+                I can apply my skills, contribute to meaningful work,
+                and continue learning.
+
+                I enjoy working on new ideas, collaborating with others,
+                and finding practical solutions to challenges.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+
+    <section id="education" class="education">
+
+        <h2>Education</h2>
+
+        <div class="education-card">
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>
+                Vellore Institute of Technology (VIT), Vellore
+            </p>
+
+            <p>
+                Expected Graduation: 2027
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills" class="skills">
+
+        <h2>Skills</h2>
+
+        <h3>Programming</h3>
+
+        <div class="skill-list">
+            <span class="skill">Python</span>
+            <span class="skill">C</span>
+            <span class="skill">C++</span>
+            <span class="skill">Java</span>
+        </div>
+
+        <br>
+
+        <h3>Web Development</h3>
+
+        <div class="skill-list">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+        </div>
+
+        <br>
+
+        <h3>Database & Tools</h3>
+
+        <div class="skill-list">
+            <span class="skill">MySQL</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">VS Code</span>
+        </div>
+
+        <br>
+
+        <h3>Areas of Interest</h3>
+
+        <div class="skill-list">
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">UI/UX Design</span>
+            <span class="skill">Business Analysis</span>
+            <span class="skill">Problem Solving</span>
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+
+                <h3>Credit Card Fraud Detection</h3>
+
+                <p>
+                    Developed a machine learning model to identify
+                    potentially fraudulent transactions using Python,
+                    Scikit-learn, and XGBoost. Deployed using Streamlit.
+                </p>
+
+                <a href="https://credit-card-fraud-detection-uip6onwnkwbunjaumabx29.streamlit.app"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Live Demo →
+                </a>
+
+                <br><br>
+
+                <a href="https://github.com/Jahnavi-hub11/credit-card-fraud-detection"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub Code →
+                </a>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Personal Finance Tracker</h3>
+
+                <p>
+                    A project focused on organizing personal financial
+                    information and tracking expenses using programming
+                    concepts and object-oriented design.
+                </p>
+
+                <p><strong>Skills:</strong> Python, OOP</p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Online Quiz Platform</h3>
+
+                <p>
+                    Developed an interactive quiz application with
+                    questions, scoring, and a user-friendly interface.
+                </p>
+
+                <p><strong>Skills:</strong> Python, Streamlit</p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Smart Task Manager</h3>
+
+                <p>
+                    A task management project designed to help users
+                    organize their activities and manage tasks through
+                    a simple web interface.
+                </p>
+
+                <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Hyperlocal Platform Discovery</h3>
+
+                <p>
+                    A database-focused project for organizing and
+                    discovering local platforms and services.
+                </p>
+
+                <p><strong>Skills:</strong> MySQL</p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Career Interests -->
+
+    <section class="interests">
+
+        <h2>Career Interests</h2>
+
+        <p>
+            I am open to internships, graduate trainee programs,
+            and entry-level opportunities across different fields,
+            including IT, business operations, data analysis,
+            and other roles where I can contribute my skills
+            and continue developing professionally.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact" class="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            I am always interested in connecting with professionals,
+            learning about new opportunities, and collaborating
+            on meaningful projects.
+        </p>
+
+        <br>
+
+        <p>
+            Email:
+            <a href="mailto:talurujahnavi@gmail.com">
+                talurujahnavi@gmail.com
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/Jahnavi-hub11"
+               target="_blank"
+               rel="noopener noreferrer">
+                View My GitHub
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Jahnavi Thaluru | Personal Portfolio
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
